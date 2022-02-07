@@ -14,3 +14,4 @@ else:
 encoder_checkpoint = "google/vit-base-patch16-224-in21k"
 decoder_checkpoint = "distilgpt2"
 model_checkpoint = "gagan3012/ViTGPT2_vizwiz"
+feature_extractor = ViTFeatureExtractor.from_pretrained(encoder_checkpoint)
