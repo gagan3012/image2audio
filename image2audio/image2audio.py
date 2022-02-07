@@ -37,3 +37,4 @@ def predict_text_to_audio(text):
     TTSHubInterface.update_cfg_with_data_cfg(cfg,task.data_cfg)
     generator = task.build_generator(model, cfg)
 
+    sample = TTSHubInterface.get_model_input(task, text)
