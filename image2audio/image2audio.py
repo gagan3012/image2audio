@@ -28,3 +28,6 @@ def predict_image_to_text(image_path):
     sample = feature_extractor(
         image, return_tensors="pt").pixel_values.to(device)
     caption_ids = model.generate(sample, max_length=50)[0]
+    caption_text = clean_text(tokenizer.decode(caption_ids))
+    return caption_text
+
