@@ -38,3 +38,5 @@ def predict_text_to_audio(text):
     generator = task.build_generator(model, cfg)
 
     sample = TTSHubInterface.get_model_input(task, text)
+    wav, rate = TTSHubInterface.get_prediction(task, model, generator, sample)
+    return wav, rate
