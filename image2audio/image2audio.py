@@ -41,3 +41,4 @@ def predict_text_to_audio(text):
     wav, rate = TTSHubInterface.get_prediction(task, model, generator, sample)
     return wav, rate
 
+def image_to_audio(image_path):
