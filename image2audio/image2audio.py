@@ -8,3 +8,4 @@ from fairseq.models.text_to_speech.hub_interface import TTSHubInterface
 
 if torch.cuda.is_available():
     device = "cuda"
+else:
