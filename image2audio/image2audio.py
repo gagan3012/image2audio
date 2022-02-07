@@ -12,3 +12,4 @@ else:
     device = "cpu"
 
 encoder_checkpoint = "google/vit-base-patch16-224-in21k"
+decoder_checkpoint = "distilgpt2"
