@@ -24,3 +24,5 @@ tts_models, cfg, task = load_model_ensemble_and_task_from_hf_hub(
 
 def predict_image_to_text(image_path):
     image = Image.open(image_path).convert("RGB")
+    def clean_text(x): return x.replace("<|endoftext|>", "").split("\n")[0]
+    sample = feature_extractor(
