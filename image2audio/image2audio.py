@@ -31,5 +31,6 @@ def predict_image_to_text(image_path):
     caption_text = clean_text(tokenizer.decode(caption_ids))
     return caption_text
 
+
 def predict_text_to_audio(text):
     model = tts_models[0]
