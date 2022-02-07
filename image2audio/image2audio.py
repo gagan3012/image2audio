@@ -20,4 +20,7 @@ model = VisionEncoderDecoderModel.from_pretrained(model_checkpoint).to(device)
 tts_models, cfg, task = load_model_ensemble_and_task_from_hf_hub(
         "facebook/fastspeech2-en-ljspeech",
         arg_overrides={"vocoder": "hifigan", "fp16": False}
+)
+
+def predict_image_to_text(image_path):
     image = Image.open(image_path).convert("RGB")
