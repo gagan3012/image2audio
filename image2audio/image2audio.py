@@ -42,3 +42,4 @@ def predict_text_to_audio(text):
     return wav, rate
 
 def image_to_audio(image_path):
+    caption_text = predict_image_to_text(image_path)
