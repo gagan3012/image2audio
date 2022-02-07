@@ -35,3 +35,4 @@ def predict_image_to_text(image_path):
 def predict_text_to_audio(text):
     model = tts_models[0]
     TTSHubInterface.update_cfg_with_data_cfg(cfg,task.data_cfg)
+    generator = task.build_generator(model, cfg)
