@@ -16,3 +16,4 @@ decoder_checkpoint = "distilgpt2"
 model_checkpoint = "gagan3012/ViTGPT2_vizwiz"
 feature_extractor = ViTFeatureExtractor.from_pretrained(encoder_checkpoint)
 tokenizer = AutoTokenizer.from_pretrained(decoder_checkpoint)
+model = VisionEncoderDecoderModel.from_pretrained(model_checkpoint).to(device)
