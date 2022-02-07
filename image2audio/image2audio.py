@@ -18,3 +18,4 @@ feature_extractor = ViTFeatureExtractor.from_pretrained(encoder_checkpoint)
 tokenizer = AutoTokenizer.from_pretrained(decoder_checkpoint)
 model = VisionEncoderDecoderModel.from_pretrained(model_checkpoint).to(device)
 tts_models, cfg, task = load_model_ensemble_and_task_from_hf_hub(
+        arg_overrides={"vocoder": "hifigan", "fp16": False}
