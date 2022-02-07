@@ -26,3 +26,5 @@ def predict_image_to_text(image_path):
     image = Image.open(image_path).convert("RGB")
     def clean_text(x): return x.replace("<|endoftext|>", "").split("\n")[0]
     sample = feature_extractor(
+        image, return_tensors="pt").pixel_values.to(device)
+    caption_ids = model.generate(sample, max_length=50)[0]
