@@ -11,3 +11,4 @@ if torch.cuda.is_available():
 else:
     device = "cpu"
 
+encoder_checkpoint = "google/vit-base-patch16-224-in21k"
